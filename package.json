@@ -8,9 +8,6 @@
     "etag": "1.8.1",
     "puppeteer-core": "2.0.0"
   },
-  "scripts": {
-    "start": "node index"
-  },
   "engines": {
     "node": "12.x"
   }
