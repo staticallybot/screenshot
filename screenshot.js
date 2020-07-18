@@ -5,7 +5,7 @@ const { getScreenshot, getScreenshotMobile } = require('./chromium');
 const { getInt, getUrlFromPath, getUrlFromPathMobile, isValidUrl } = require('./validator');
 
 /* Get desktop view */
-async function getDesktop(req, res) {
+module.exports = async function (req, res) {
     try {
         const { pathname = '/', query = {} } = parse(req.url, true);
         const { type = 'png', quality, fullPage } = query;
@@ -33,5 +33,3 @@ async function getDesktop(req, res) {
         console.error(e.message);
     }
 }
-
-module.exports = { getDesktop }
